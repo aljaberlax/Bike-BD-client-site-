@@ -54,5 +54,21 @@
         "stock": 10000,
         "img": "https://i.ibb.co/Gn8Y3vc/mouse.jpg",
         "quantity": 300
+    },
+    {
+        "name": "RAM(4GB LPDDR4 2400MHz)",
+        "description": "RAM Size: 16GB, Speed: 5600MHz.Latency: 36-36-36-76.Compatibility: Intel 600 Series.Performance Profile: XMP 3.0.Voltage & Cas Latency: 1.2V/CL17",
+        "price": 2000,
+        "stock": 10000,
+        "img": "https://i.ibb.co/Gn8Y3vc/mouse.jpg",
+        "quantity": 300
+    },
+    {
+        "name": "Monitor(32 inch LED Pannel)",
+        "description": "Dynamic Contrast Ratio.32-Inch Display with HD Resolution.Hi Quality Built In Spekar.Warranty: 1 Year.75Hz refresh rate & Adaptive-Sync technology.",
+        "price": 45000,
+        "stock": 400,
+        "img": "https://i.ibb.co/Gn8Y3vc/mouse.jpg",
+        "quantity": 100
     }
 ]
