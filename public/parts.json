@@ -1,0 +1,58 @@
+[
+    {
+        "name": "HDD(Hard Disk Drive) 1TB",
+        "description": "Capacity: 1000 GB.Interface: SATA 6 Gb/s.Rotational Speed: 5400RPM.Buffer Memory: 256MB.",
+        "price": 7000,
+        "stock": 2000,
+        "img": "https://i.ibb.co/0BXBXpq/HDD.jpg",
+        "quantity": 200
+    },
+    {
+        "name": "Cpu Cooling Fan",
+        "description": "Radial aluminum heatsink for excellent cooling performance.Fan Dimension: Ф92X25mm.Rated Voltage: 12VDC.Started Voltage: 7VDC.Fan Speed: 500~1800 RPM±10%",
+        "price": 500,
+        "stock": 20000,
+        "img": "https://i.ibb.co/xjScp32/cooling-fan.jpg",
+        "quantity": 500
+    },
+    {
+        "name": "Cpu Casing",
+        "description": "Type: ATX X3 chassis.USB3.0*2, HD_Audio Port.ARGB Controller Box HUB.Tempered glass on the left side.1x12cm black fan on the rear panel.",
+        "price": 5000,
+        "stock": 1000,
+        "img": "https://i.ibb.co/vkHxPxW/caching.jpg",
+        "quantity": 100
+    },
+    {
+        "name": "SSD(Solid State Drive",
+        "description": "Intel Celeron Processor N4020 (4M Cache, 1.10 GHz up to 2.80 GHz).Form Factor: 2.5 inch.Interface: SATA 6 Gb/s.Max. Sequential Read: 550 MB/s.Max. Sequential Write: 500 MB/s",
+        "price": 3600,
+        "stock": 5000,
+        "img": "https://i.ibb.co/zRsDrxN/ssd.jpg",
+        "quantity": 200
+    },
+    {
+        "name": "Sound Box",
+        "description": "Signal / noise ratio > 70 dB.Frequency response.35 Hz - 30 kHz.Separation: > 50 dB.Connectivity: Wired USB, Channel 2:0.Colorful Lighting Design",
+        "price": 850,
+        "stock": 2000,
+        "img": "https://i.ibb.co/syTrFTS/sound-box.jpg",
+        "quantity": 300
+    },
+    {
+        "name": "Mouse",
+        "description": "High Precision Optical Tracking.Sensor resolution: 1000 dpi.Number of buttons: 5.18-month battery life.Chipset: MX8733",
+        "price": 450,
+        "stock": 10000,
+        "img": "https://i.ibb.co/Gn8Y3vc/mouse.jpg",
+        "quantity": 300
+    },
+    {
+        "name": "KeyBoard",
+        "description": "Keyboard: Backlit floating-keys multimedia gaming.Keyboard: 104 keys.Mouse: Adjustable DPI (200-8000).Wired USB Connection.Multimedia Keys.",
+        "price": 450,
+        "stock": 10000,
+        "img": "https://i.ibb.co/Gn8Y3vc/mouse.jpg",
+        "quantity": 300
+    }
+]
