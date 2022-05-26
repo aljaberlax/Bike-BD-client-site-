@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import PartsCart from './PartsCart';
-
-const Parts = () => {
+import PartsCart from '../Home/Parts/PartsCart';
+import pcbuilder from '../AllParts/maxresdefault.jpg'
+const AllParts = () => {
     const [parts, setParts] = useState([]);
 
     useEffect(() => {
@@ -11,14 +11,11 @@ const Parts = () => {
     }, [])
 
     return (
-        <div className='my-10'>
-            <div className='text-center'>
-                <h3 className='text-primary  text-xl font-bold uppercase'>Parts we Manufacture</h3>
-                
-            </div>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10'>
+        <div className='my-28'>
+            <img className=' text-center mx-auto' src={pcbuilder} alt="" />
+            <div className='mx-auto my-10 container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
-                    parts.slice(0, 6).map(part => <PartsCart
+                    parts.map(part => <PartsCart
                         key={part._id}
                         part={part}
                     >
@@ -29,4 +26,4 @@ const Parts = () => {
     );
 };
 
-export default Parts;
+export default AllParts;

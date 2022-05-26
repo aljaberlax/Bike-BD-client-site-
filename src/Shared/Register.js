@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import Loading from './Loading';
 
+
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -127,6 +128,7 @@ const Register = () => {
                 </div>
             </div>
         </div >
+       
     );
 };
 

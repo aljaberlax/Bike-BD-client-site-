@@ -1,6 +1,7 @@
 import React from 'react';
 import Carosel from './Carosel';
 import Parts from './Parts/Parts';
+import Reviews from './Reviews';
 
 const Home = () => {
     return (
@@ -9,7 +10,9 @@ const Home = () => {
             <Carosel></Carosel>
            
             <Parts></Parts>
-            
+
+            <Reviews></Reviews>
+
         </div>
     );
 };
