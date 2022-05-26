@@ -13,7 +13,7 @@ const Parts = () => {
     return (
         <div className='my-10'>
             <div className='text-center'>
-                <h3 className='text-primary  text-xl font-bold uppercase'>Parts we Manufacture</h3>
+                <h3 className='text-primary  text-3xl font-bold '>Parts we Manufacture</h3>
                 
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-10'>

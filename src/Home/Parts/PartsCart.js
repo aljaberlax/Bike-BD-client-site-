@@ -10,7 +10,7 @@ const PartsCart = ({ part }) => {
     }
     return (
         <div class="card lg:max-w-lg bg-base-100  shadow-2xl bg-base-200 justify-center  ">
-            <div class="card-body py-10 flex justify-center items-center">
+            <div class="card-body flex justify-center items-center">
                 <h2 class="card-title">{name}</h2>
                 <img className='rounded-xl' src={img} alt="" />
                 <p>Description : <small>{description}</small></p>
