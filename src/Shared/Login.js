@@ -40,7 +40,9 @@ const Login = () => {
 
     }
 
-
+const navigateRegister=Event=>{
+    navigate('/register');
+}
     return (
         <div className='flex justify-center items-center h-screen'>
         <div class="card w-96 bg-base-100 shadow-xl">
@@ -98,7 +100,7 @@ const Login = () => {
                     {signInError}
                     <input className='btn w-full max-w-xs' value='login' type="submit" />
                 </form>
-                <p><small>New Member? <Link className='text-primary' to='/signup'>Create New Account</Link></small></p>
+                <p>New Member? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister} >Please Register</Link> </p>
                 <div class="divider">OR</div>
 
                 <button  onClick={() => signInWithGoogle()}  class="btn btn-primary">Continue with google</button>
