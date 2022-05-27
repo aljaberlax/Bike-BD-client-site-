@@ -37,43 +37,7 @@ const Login = () => {
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
     }
-//     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    
-    
-//     const { register, formState: { errors }, handleSubmit } = useForm();
-    
-//     const [
-//         signInWithEmailAndPassword,
-//         user,
-//         loading,
-//         error,
-//     ] = useSignInWithEmailAndPassword(auth);
-    
-//     let signInError;
-//     let navigate = useNavigate();
-//     let location = useLocation();
-//     let from = location.state?.from?.pathname || "/";
 
-//     if (loading || gLoading) {
-//         return <Loading></Loading>
-//     }
-//     if (error || gError) {
-//         signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
-//     }
-
-//     if (user || gUser) {
-//         navigate(from, { replace: true });
-//     }
-//     const onSubmit = data => {
-//         console.log(data)
-//         signInWithEmailAndPassword(data.email, data.password)
-//         navigate(from, { replace: true });
-
-//     }
-
-// const navigateRegister=Event=>{
-//     navigate('/register');
-// }
     return (
         <div className='flex h-screen justify-center items-center'>
         <div className="card w-96 bg-base-100 shadow-xl">

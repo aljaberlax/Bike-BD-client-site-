@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
-    const [appointments, setAppointments] = useState([]);
+    const [bookings, setBookings] = useState([]);
     const [user] = useAuthState(auth);
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?patient=${user.email}`, {
+            fetch(`https://morning-harbor-44069.herokuapp.com/booking`, {
                 method: 'Get',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem("accessToken")}`
@@ -26,32 +26,38 @@ const MyOrders = () => {
 
                     return res.json()
                 })
-                .then(data => setAppointments(data));
+                .then(data => setBookings(data));
         }
     }, [user])
+
+   
     return (
         <div>
-        <h1>My Orders : {appointments.length}</h1>
+        <h1>My Orders : {bookings.length}</h1>
         <div class="overflow-x-auto">
             <table class="table w-full">
 
                 <thead>
                     <tr>
                         <th></th>
+                        <th>User Name</th>
                         <th>Parts Name</th>
                         <th>Quantity</th>
                         <th>Price</th>
+                        <th>Country</th>
                         <th>Option</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        appointments.map((a, index) => <tr>
+                        bookings.map((a, index) => <tr>
                             <th>{index + 1}</th>
-                            <td>{a.patientName}</td>
-                            <td>{a.date}</td>
-                            <td>{a.slot}</td>
-                            <td>{a.treatment}</td>
+                            <td>{a.name}</td>
+                            <td>{a.productName}</td>
+                            <td>{a.quantity}</td>
+                            <td>{a.price}</td>
+                            <td>{a.country}</td>
+                            <td><button  className='btn btn-secondary'>Cancle Order</button></td>
                         </tr>)
                     }
 

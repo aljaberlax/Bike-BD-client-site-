@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const PartsCart = ({ part }) => {
+const PartsCart = ({ part,setBooking }) => {
     const {_id, name, description, quantity, stock, price, img } = part;
     const navigate = useNavigate();
 
     const navigateToProductDetail = id => {
-        navigate(`/parts/${id}`);
+        navigate(`/parts/${_id}`);
     }
     return (
         <div class="card lg:max-w-lg bg-base-100  shadow-2xl bg-base-200 justify-center  ">
