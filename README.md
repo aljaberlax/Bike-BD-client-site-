@@ -1,6 +1,10 @@
-# My Git Hub LInk
+# My Git Hub LInk(Client site)
 
 https://github.com/programming-hero-web-course1/manufacturer-website-client-side-aljaberlax
+
+# My Git Hub LInk(Server site)
+
+https://github.com/programming-hero-web-course1/manufacturer-website-server-side-aljaberlax
 
 ## Live LInk
 
