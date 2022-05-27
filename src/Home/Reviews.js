@@ -1,38 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import people1 from '../assets/review/people1.png'
 import people2 from '../assets/review/people2.png'
 import people3 from '../assets/review/people3.png'
 
 const Reviews = () => {
-    const reviews = [
-        {
-            _id: 1,
-            name: 'AL Jaber',
-            review: 'Hi i am jaber , form Canada. I like this company because their shipment so good and shiped so quickely.',
-            location: 'Canada',
-            img: people1
-        },
-        {
-            _id: 2,
-            name: 'Md Rakibul islam',
-            review: 'I am highly recommanded this company . Such a good behaibhour.',
-            location: 'Bangladesh',
-            img: people2
-        },
-        {
-            _id: 3,
-            name: 'Anne Maria',
-            review: 'I like their Parts and their parts price is less then the others company and product quality is good',
-            location: 'Australia',
-            img: people3
-        },
-    ];
+
+    const [reviews, setReviews] = useState([]);
+    const navigate=useNavigate();
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReviews(data));
+    }, [reviews])
+    // const reviews = [
+    //     {
+    //         _id: 1,
+    //         name: 'AL Jaber',
+    //         review: 'Hi i am jaber , form Canada. I like this company because their shipment so good and shiped so quickely.',
+    //         location: 'Canada',
+    //         img: people1
+    //     },
+    //     {
+    //         _id: 2,
+    //         name: 'Md Rakibul islam',
+    //         review: 'I am highly recommanded this company . Such a good behaibhour.',
+    //         location: 'Bangladesh',
+    //         img: people2
+    //     },
+    //     {
+    //         _id: 3,
+    //         name: 'Anne Maria',
+    //         review: 'I like their Parts and their parts price is less then the others company and product quality is good',
+    //         location: 'Australia',
+    //         img: people3
+    //     },
+    // ];
     return (
         <section className='my-28'>
             <div className=''>
                 <div className=' text-center'>
                     
-                    <h2 className='text-3xl'>Our Valuable Customers</h2>
+                    <h2 className='text-3xl'>Our Valuable Customers Reviews</h2>
                 </div>
 
             </div>

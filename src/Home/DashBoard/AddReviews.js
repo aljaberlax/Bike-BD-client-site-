@@ -1,9 +1,64 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
 
 const AddReviews = () => {
+    const { register, handleSubmit } = useForm();
+
+    const onSubmit = data =>{
+        console.log(data)
+        const url = `http://localhost:5000/review`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res=> res.json())
+        .then(result =>{
+            console.log(result);
+           window.alert('Review successfully added')
+        } )
+    }
     return (
         <div>
-            <h1>this is add reviews</h1>
+            <form onSubmit={handleSubmit(onSubmit)}  >
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Your name?</span>
+
+                    </label>
+                    <input type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs"  {...register("name", { required: true, maxLength: 20 })} />
+
+                </div>
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Image Url</span>
+
+                    </label>
+                    <input type="text" placeholder="Image URL" class="input input-bordered w-full max-w-xs"{...register("img")} />
+
+                </div>
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Your Country</span>
+
+                    </label>
+                    <input type="text" placeholder="Your Country" class="input input-bordered w-full max-w-xs" {...register("country")}/>
+
+                </div>
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Your Comment</span>
+
+                    </label>
+                    <textarea placeholder="Comment Here" class="input input-bordered w-full max-w-xs" {...register("review")}></textarea>
+
+                </div>
+                <input type="submit" className='btn btn-secondary my-5' value="Review" />
+                
+            </form>
         </div>
     );
 };
