@@ -7,6 +7,7 @@ import DashBoard from "./Home/DashBoard/DashBoard";
 import MyOrders from "./Home/DashBoard/MyOrders";
 import MyProfile from "./Home/DashBoard/MyProfile";
 import Home from "./Home/Home";
+import NotFound from "./Home/NotFound/NotFound";
 import Purchase from "./Purchase/Purchase";
 import Footer from "./Shared/Footer";
 import Login from "./Shared/Login";
@@ -33,6 +34,7 @@ function App() {
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
         </Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
