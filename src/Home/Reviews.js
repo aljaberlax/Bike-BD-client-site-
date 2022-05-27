@@ -59,7 +59,7 @@ const Reviews = () => {
                                     </div>
                                     <div>
                                         <h4 className='text-xl'>{review.name}</h4>
-                                        <p>{review.location}</p>
+                                        <p>Location : {review.country}</p>
                                        <div>Ratings: {review.ratings} Out of 5</div>
                                     </div>
                                 </div>
