@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 const AddReviews = () => {
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = data =>{
+    const onSubmit = data => {
         console.log(data)
         const url = `http://localhost:5000/review`;
         fetch(url, {
@@ -15,11 +15,11 @@ const AddReviews = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res=> res.json())
-        .then(result =>{
-            console.log(result);
-           window.alert('Review successfully added')
-        } )
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                window.alert('Review successfully added')
+            })
     }
     return (
         <div>
@@ -29,7 +29,7 @@ const AddReviews = () => {
                         <span class="label-text">Your name?</span>
 
                     </label>
-                    <input type="text" placeholder="Your Name" class="input input-bordered w-full max-w-xs"  {...register("name", { required: true, maxLength: 20 })} />
+                    <input type="text" required placeholder="Your Name" class="input input-bordered w-full max-w-xs"  {...register("name", { required: true, maxLength: 20 })} />
 
                 </div>
                 <div class="form-control w-full max-w-xs">
@@ -37,7 +37,7 @@ const AddReviews = () => {
                         <span class="label-text">Image Url</span>
 
                     </label>
-                    <input type="text" placeholder="Image URL" class="input input-bordered w-full max-w-xs"{...register("img")} />
+                    <input required type="text" placeholder="Image URL" class="input input-bordered w-full max-w-xs"{...register("img")} />
 
                 </div>
                 <div class="form-control w-full max-w-xs">
@@ -45,7 +45,7 @@ const AddReviews = () => {
                         <span class="label-text">Your Country</span>
 
                     </label>
-                    <input type="text" placeholder="Your Country" class="input input-bordered w-full max-w-xs" {...register("country")}/>
+                    <input type="text" required placeholder="Your Country" class="input input-bordered w-full max-w-xs" {...register("country")} />
 
                 </div>
                 <div class="form-control w-full max-w-xs">
@@ -53,11 +53,18 @@ const AddReviews = () => {
                         <span class="label-text">Your Comment</span>
 
                     </label>
-                    <textarea placeholder="Comment Here" class="input input-bordered w-full max-w-xs" {...register("review")}></textarea>
+                    <textarea placeholder="Comment Here" class="input input-bordered w-full max-w-xs" {...register("review")} required></textarea>
+                    <div class="form-control w-full max-w-xs">
+                        <label class="label">
+                            <span class="label-text">Retings</span>
 
+                        </label>
+                        <input type="text" placeholder="add ratings 1 to 5" class="input input-bordered w-full max-w-xs" {...register("ratings")} required />
+
+                    </div>
                 </div>
                 <input type="submit" className='btn btn-secondary my-5' value="Review" />
-                
+
             </form>
         </div>
     );
