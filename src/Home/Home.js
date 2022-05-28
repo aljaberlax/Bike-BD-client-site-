@@ -1,5 +1,6 @@
 import React from 'react';
 import BusinessSummery from './BusinessSummery/BusinessSummery';
+import Career from './Career';
 import Carosel from './Carosel';
 import Parts from './Parts/Parts';
 import Reviews from './Reviews';
@@ -13,6 +14,7 @@ const Home = () => {
             <Parts></Parts>
             <BusinessSummery></BusinessSummery>
             <Reviews></Reviews>
+            <Career></Career>
 
         </div>
     );

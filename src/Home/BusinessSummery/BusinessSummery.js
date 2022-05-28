@@ -41,9 +41,11 @@ const BusinessSummery = () => {
                         <h1 className='text-secondary font-bold text-3xl'>Have any question about us or get a product request ?</h1>
                         <h1 className='text-xl'>Dont hesitate to contact us</h1>
                     </div>
-                    <div className='flex flex-col py-5  p-5'>
-                        <button class="btn btn-success text-white ">Request for Quote</button>
-                        <button class="btn btn-active text-white">Contact us</button>
+                    <div className='flex justify-center items-center  py-5  p-5'>
+                       <div className='m-5'>
+                       <button class="btn btn-success text-white ">Request for Quote</button>
+                       </div>
+                       <div className='m-5'> <button class="btn btn-active text-white">Contact us</button></div>
                     </div>
                 </div>
             </div>

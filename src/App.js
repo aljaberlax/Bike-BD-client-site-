@@ -8,6 +8,7 @@ import MyOrders from "./Home/DashBoard/MyOrders";
 import MyProfile from "./Home/DashBoard/MyProfile";
 import Home from "./Home/Home";
 import NotFound from "./Home/NotFound/NotFound";
+import PcBuyingGuide from "./Home/PcBuyingGuide/PcBuyingGuide";
 import Purchase from "./Purchase/Purchase";
 import Footer from "./Shared/Footer";
 import Login from "./Shared/Login";
@@ -24,8 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/guide" element={<PcBuyingGuide></PcBuyingGuide>}></Route>
         <Route path="/allparts" element={<AllParts></AllParts>}></Route>
-        <Route path='/parts/:productId' element={<Purchase></Purchase>}></Route>
+        <Route path='/parts/:productId' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/dashboard" element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
