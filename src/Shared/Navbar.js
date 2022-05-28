@@ -20,10 +20,12 @@ const Navbar = () => {
         {
             user && <li><Link to='/dashboard'>Dashboard</Link></li>
         }
+        <li><Link to="/contact">Contact Us</Link></li>
         <li>{user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> : <Link to='/login'>Login</Link>}</li>
         {
             user && <><li>{user.displayName}</li></>
         }
+         
     </>
     return (
         <div className="navbar bg-base-100">

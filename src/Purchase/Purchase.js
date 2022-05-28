@@ -27,7 +27,7 @@ const Purchase = () => {
         const productName=product.name;
         if (data.quantity >= product.quantity && data.quantity <= product.stock ) {
             console.log(data.quantity)
-            const url = `http://localhost:5000/booking`;
+            const url = `https://morning-harbor-44069.herokuapp.com/booking`;
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -109,14 +109,7 @@ const Purchase = () => {
                                 <input type="text" placeholder="How much you need?" class="input input-bordered w-full max-w-xs" {...register("quantity")} required />
 
                             </div>
-                            <div class="form-control w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Price</span>
-
-                                </label>
-                                <input type="text" placeholder="Total Price=Quantity*Unit price" class="input input-bordered w-full max-w-xs" {...register("price")} required />
-
-                            </div>
+                        
                             <div class="form-control w-full max-w-xs">
                                 <label class="label">
                                     <span class="label-text">Mobile</span>
