@@ -10,7 +10,7 @@ const MyOrders = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`https://morning-harbor-44069.herokuapp.com/booking`, {
+            fetch(`https://pc-builder-bd.onrender.com/booking`, {
                 method: 'Get',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem("accessToken")}`

@@ -7,7 +7,7 @@ const AddReviews = () => {
 
     const onSubmit = data => {
         console.log(data)
-        const url = `https://morning-harbor-44069.herokuapp.com/review`;
+        const url = `https://pc-builder-bd.onrender.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {

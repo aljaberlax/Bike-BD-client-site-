@@ -9,7 +9,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     const navigate=useNavigate();
     useEffect(() => {
-        fetch('https://morning-harbor-44069.herokuapp.com/review')
+        fetch('https://pc-builder-bd.onrender.com/review')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [reviews])

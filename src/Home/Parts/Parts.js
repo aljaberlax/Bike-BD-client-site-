@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading';
 const Parts = () => {
     // const [parts, setParts] = useState([]);
-    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch(`https://morning-harbor-44069.herokuapp.com/parts`)
+    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch(`https://pc-builder-bd.onrender.com/parts`)
     .then(res => res.json()))
 
     console.log(parts)

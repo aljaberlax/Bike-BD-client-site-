@@ -13,7 +13,7 @@ const Purchase = () => {
     const { register, handleSubmit } = useForm();
     const [reload, setReload] = useState(false)
     useEffect(() => {
-        const url = `https://morning-harbor-44069.herokuapp.com/parts/${productId}`;
+        const url = `https://pc-builder-bd.onrender.com/parts/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => SetProduct(data)
@@ -27,7 +27,7 @@ const Purchase = () => {
         const productName=product.name;
         if (data.quantity >= product.quantity && data.quantity <= product.stock ) {
             console.log(data.quantity)
-            const url = `https://morning-harbor-44069.herokuapp.com/booking`;
+            const url = `https://pc-builder-bd.onrender.com/booking`;
             fetch(url, {
                 method: 'POST',
                 headers: {
